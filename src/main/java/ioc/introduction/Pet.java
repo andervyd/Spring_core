@@ -1,4 +1,4 @@
-package ioc.introdaction;
+package ioc.introduction;
 
 public interface Pet {
 
