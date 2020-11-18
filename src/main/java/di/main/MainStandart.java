@@ -1,8 +1,8 @@
 package di.main;
 
-import di.Person;
-import ioc.introduction.Dog;
-import ioc.introduction.Pet;
+import animals.Person;
+import animals.Dog;
+import animals.Pet;
 
 public class MainStandart {
     public static void main(String[] args) {

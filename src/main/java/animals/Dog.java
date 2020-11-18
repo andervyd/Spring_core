@@ -1,4 +1,4 @@
-package ioc.introduction;
+package animals;
 
 
 public class Dog implements Pet{
@@ -11,6 +11,14 @@ public class Dog implements Pet{
     @Override
     public void say() {
         System.out.println("Bow-Wow");
+    }
+
+    public void init() {
+        System.out.println("Class Dog: method init();");
+    }
+
+    public void destroy() {
+        System.out.println("Class Dog: method destroy();");
     }
 
 }

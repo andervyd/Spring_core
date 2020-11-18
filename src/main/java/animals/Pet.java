@@ -1,4 +1,4 @@
-package ioc.introduction;
+package animals;
 
 public interface Pet {
 

@@ -1,6 +1,6 @@
 package di.main;
 
-import di.Person;
+import animals.Person;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.File;

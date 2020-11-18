@@ -7,8 +7,12 @@
 	    http://www.springframework.org/schema/context
 	    http://www.springframework.org/schema/context/spring-context.xsd">
 
+
     <bean id = "myPet"
-          class = "animals.Cat">
+          class = "animals.Dog"
+
+            init-method = "init"
+            destroy-method = "destroy">
     </bean>
 
 </beans>

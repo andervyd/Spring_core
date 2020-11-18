@@ -1,19 +1,33 @@
-package di;
+package animals;
 
-import ioc.introduction.Pet;
+import animals.Pet;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component("personBean")
 public class Person {
 
+//    @Value("Ivan")
+    @Value("${person.firstName}")
     private String firstName;
+//    @Value("34")
+    @Value("${person.age}")
     private int age;
+
+//    @Autowired
+//    @Qualifier("mouseBean")
     private Pet pet;
+
 
     public Person() {
         // default
         System.out.println("Default constructor Person bean is created");
     }
 
-    public Person(Pet pet) {
+    @Autowired
+    public Person(@Qualifier("mouseBean") Pet pet) {
         System.out.println("Constructor Person bean is created");
         this.pet = pet;
     }
@@ -41,6 +55,8 @@ public class Person {
         this.age = age;
     }
 
+//    @Autowired
+//    @Qualifier("mouseBean")
     public void setPet(Pet pet) {
         System.out.println("Class Person: setPet();");
         this.pet = pet;

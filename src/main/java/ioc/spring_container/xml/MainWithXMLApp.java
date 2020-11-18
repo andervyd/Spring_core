@@ -1,6 +1,6 @@
 package ioc.spring_container.xml;
 
-import ioc.introduction.Pet;
+import animals.Pet;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.File;

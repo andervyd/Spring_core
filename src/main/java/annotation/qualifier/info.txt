@@ -1,0 +1,22 @@
+// field:
+
+    @Autowired
+    @Qualifier("name_bean")
+    private Pet pet;
+
+// constructor:
+
+    @Autowired
+    public Person(@Qualifier("name_bean") Pet pet) {
+        System.out.println("Constructor Person bean is created");
+        this.pet = pet;
+    }
+
+// setter:
+
+    @Autowired
+    @Qualifier("name_bean")
+    public void setPet(Pet pet) {
+        System.out.println("Class Person: setPet();");
+        this.pet = pet;
+    }
