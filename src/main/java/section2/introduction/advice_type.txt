@@ -1,0 +1,6 @@
+Advice type:
+    Before
+    After returning
+    After throwing
+    After / After finally
+    Around
