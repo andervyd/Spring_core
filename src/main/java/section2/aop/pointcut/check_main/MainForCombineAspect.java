@@ -6,7 +6,7 @@ import section2.aop.pointcut.library.CityLibrary;
 
 public class MainForCombineAspect {
     public static void main(String[] args) {
-
+/*
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(MyConfig.class);
 
@@ -27,5 +27,7 @@ public class MainForCombineAspect {
 
 
         context.close();
+*/
+
     }
 }
