@@ -6,8 +6,8 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class LoggingAndSecurityAspectWithCombineNew {
 
     @Pointcut("execution( * section2.aop.pointcut.library.CityLibrary.*(..))")
