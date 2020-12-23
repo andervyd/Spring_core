@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	    http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://www.springframework.org/schema/context
+	    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--        path to properties -->
+    <context:property-placeholder location= "classpath:di/class_person.properties"/>
+
+    <bean id = "myPet"
+          class = "ioc_di.classes.Cat">
+    </bean>
+
+    <bean id = "myPerson"
+        class = "ioc_di.classes.Person">
+
+<!--        Dependency Injection with constructor -->
+        <!-- <constructor-arg ref = "myPet"/> -->
+
+<!--        Dependency Injection with setter -->
+        <property name = "pet" ref = "myPet"/>
+
+<!--        old values (not properties) -->
+        <!-- <property name = "firstName" value = "John"/> -->
+        <!-- <property name = "age" value = "24"/> -->
+
+        <property name = "firstName" value = "${person.firstName}"/>
+        <property name = "age" value = "${person.age}"/>
+
+    </bean>
+
+</beans>
